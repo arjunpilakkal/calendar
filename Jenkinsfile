@@ -32,7 +32,7 @@ pipeline {
     stage('Run Container') {
       steps {
         sh 'docker rm -f calendar || true'
-        sh 'docker run -d --name calendar -p 8080:8080 $DOCKERHUB_USER/$IMAGE_NAME:$IMAGE_TAG'
+        sh 'docker run -d --name calendar -p 9090:8080 $DOCKERHUB_USER/$IMAGE_NAME:$IMAGE_TAG'
       }
     }
   }
